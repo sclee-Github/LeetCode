@@ -3,8 +3,7 @@ impl Solution {
         let nums_len = nums.len();
 
         for i in 0..nums_len {
-            nums.push(nums[i]);
-            // nums.extend([nums[i]]);
+            nums.push(nums[i]); // nums.extend([nums[i]]);
         }
 
         nums
