@@ -1,10 +1,5 @@
 pub fn get_concatenation(mut nums: Vec<i32>) -> Vec<i32> {
-    let nums_len = nums.len();
-
-    for i in 0..nums_len {
-        nums.push(nums[i]);
-        // num.extend(nums[i]);
-    }
+    nums.extend_from_within(0..);
 
     nums
 }
