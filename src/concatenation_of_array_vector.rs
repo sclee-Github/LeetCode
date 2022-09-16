@@ -10,7 +10,7 @@ pub fn get_concatenation(mut nums: Vec<i32>) -> Vec<i32> {
 }
 
 #[cfg(test)]
-mod concatenation_of_array {
+mod tests {
     use super::*;
 
     #[test]
