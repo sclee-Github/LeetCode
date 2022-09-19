@@ -1,10 +1,13 @@
-pub fn running_sum_array(mut nums: Vec<i32>) -> Vec<i32> {
+pub fn running_sum_array(nums: Vec<i32>) -> Vec<i32> {
     let nums_len = nums.len();
     let mut ans: Vec<i32> = vec![0; nums_len];
 
-    for i in (0..nums_len).rev() {
-        ans[i] = nums.iter().sum();
-        nums.pop();
+    for i in 0..nums_len {
+        if i == 0 {
+            ans[i] = nums[i];
+        } else {
+            ans[i] = ans[i - 1] + nums[i];
+        }
     }
 
     ans
