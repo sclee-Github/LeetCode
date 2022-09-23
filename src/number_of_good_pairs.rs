@@ -1,6 +1,19 @@
-use std::collections::HashMap;
+use std::collections::HashSet;
 
 pub fn get_number_of_good_pairs(nums: Vec<i32>) -> i32 {
+    let uniq_nums: HashSet<i32> = nums.iter().cloned().collect();
+    // let uniq_nums: Vec<i32> = nums.into_iter().unique().collect();
+    // nums.sort();
+    // nums.dedup();
+
+    // println!("{:?}", nums.iter().map(|x| nums.iter().filter(|y| *y == x).count() as i32).collect::<Vec<i32>>());
+
+    uniq_nums.into_iter().fold(0, |total_count, uniq_num| {
+        let count = nums.iter().filter(|num| *num == &uniq_num).count() as i32;
+        total_count + (count * (count - 1) / 2) as i32
+    })
+
+    /* First Solution
     let mut count_hashmap: HashMap<i32, i32> = HashMap::new();
     let mut total_count = 0;
 
@@ -20,6 +33,7 @@ pub fn get_number_of_good_pairs(nums: Vec<i32>) -> i32 {
     }
 
     total_count
+     */
 }
 
 #[cfg(test)]
