@@ -1,6 +1,10 @@
 mod build_array_from_permutation;
 mod concatenation_of_array_vector;
+mod convert_binary_num_in_linked_list;
 mod count_items_matching_a_rule;
+mod decode_the_message;
+mod decode_xored_array;
+mod decompress_decoded_list;
 mod defanging_an_ip_address;
 mod how_many_number_smaller;
 mod jewels_and_stones;
@@ -10,6 +14,8 @@ mod minimum_sum_of_four_digit;
 mod number_of_good_pairs;
 mod richest_customer_wealth;
 mod running_sum_array;
+mod shuffle_array;
+mod shuffle_string;
 mod sorting_the_sentence;
 mod subtract_product_and_sum_of_digits;
 fn main() {
