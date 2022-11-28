@@ -23,6 +23,8 @@ mod shuffle_array;
 mod shuffle_string;
 mod sorting_the_sentence;
 mod subtract_product_and_sum_of_digits;
+mod two_sum;
+mod ugly_number;
 fn main() {
     println!("Hello, world!");
 }
